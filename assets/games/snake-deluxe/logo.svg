@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect fill="#0a0a0f" width="400" height="400"/>
+  
+  <!-- Neon glow effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Snake body -->
+  <g filter="url(#glow)">
+    <!-- Snake segments -->
+    <rect x="80" y="180" width="40" height="40" fill="#00ff00" rx="4"/>
+    <rect x="120" y="180" width="40" height="40" fill="#00ff00" rx="4"/>
+    <rect x="160" y="180" width="40" height="40" fill="#00ff00" rx="4"/>
+    <rect x="200" y="180" width="40" height="40" fill="#00ff00" rx="4"/>
+    <rect x="240" y="180" width="40" height="40" fill="#00ff00" rx="4"/>
+    <rect x="280" y="180" width="40" height="40" fill="#00ff00" rx="4"/>
+    <rect x="280" y="140" width="40" height="40" fill="#00ff00" rx="4"/>
+    
+    <!-- Snake head with eyes -->
+    <rect x="280" y="100" width="40" height="40" fill="#00ff00" rx="4"/>
+    <circle cx="290" cy="115" r="4" fill="#0a0a0f"/>
+    <circle cx="310" cy="115" r="4" fill="#0a0a0f"/>
+    
+    <!-- Food/apple -->
+    <circle cx="150" cy="280" r="20" fill="#ff00ff"/>
+    <rect x="145" y="260" width="10" height="15" fill="#00ff00" rx="2"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="350" font-family="monospace" font-size="36" fill="#00ff00" text-anchor="middle" filter="url(#glow)">SNAKE</text>
+</svg>
